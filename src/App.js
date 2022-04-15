@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import { TodoForm } from './Components/TodoForm';
+import { TodoList } from './Components/TodoList';
+import { CommunicationLayer } from './Utils/Data';
+
+const com = new CommunicationLayer();
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  const reload = () => {
+    com.fetchTodos(setTodos);
+  };
+
+  const addTodos = (action) => {
+    com.addTodos(action, reload);
+  };
+
+  const toggleCompleted = (id) => {
+    com.toggleCompleted(id, reload);
+  };
+
+  const deleteTodo = (id) => {
+    com.deleteTodo(id, reload)
+  };
+
+  useEffect(() => {
+    reload();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='todo-app'>
+      <h1 className='todo-title'>Todo App</h1>
+      <TodoForm 
+        addTodos={addTodos}
+      />
+      <TodoList 
+        todos={todos}
+        toggleCompleted={toggleCompleted}
+        className='todo-list'
+        deleteTodo={deleteTodo}
+      />
     </div>
   );
 }

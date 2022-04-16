@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
-export const TodoForm = (props) => {
+const TodoForm = (props) => {
     const [input, setInput] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.addTodos(input)
-        console.log('input 1 dans form', input)
+        props.addTodo(input)
         setInput('');
     };
 
@@ -23,7 +22,6 @@ export const TodoForm = (props) => {
                     type='text'
                     placeholder='Add something to do'
                     value={input}
-                    name='text'
                     onChange={handleChange}
                 />
                 <button className='todo-form-button'>Add</button>
@@ -31,3 +29,5 @@ export const TodoForm = (props) => {
         </div>
     )
 };
+
+export default TodoForm;

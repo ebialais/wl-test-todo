@@ -18,12 +18,23 @@
     width:80%;
     padding-left: 15px;
     height: 40px;
-    font-size: 17px
+    font-size: 17px;
+    border: 2px solid #B4F5FF;
+    border-radius: 5px;
 }
 
 .todo-form-button {
-    width: 20%;
-    font-size: 17px
+    width: 19%;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    background-color: #B4F5FF;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .todo-element {
@@ -38,9 +49,27 @@
 
 .completed {
     opacity: 0.4;
-    text-decoration: line-through;
 }
 
 .uncompleted {
     opacity: 1;
+}
+
+.completed-todo-p {
+    text-decoration: line-through;
+}
+
+.todo-buttons-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.todo-button {
+    margin: 5px;
+    padding: 5px;
+    background-color: #B4F5FF;
+    width: 40px;
+    border: 2px solid #040A40;
+    color: #040A40;
+    border-radius: 10px;
 }

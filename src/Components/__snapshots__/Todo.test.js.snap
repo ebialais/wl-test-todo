@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test completed todo rendering: uncompleted todo 1`] = `<div />`;
+
+exports[`test uncompleted todo rendering: uncompleted todo 1`] = `<div />`;

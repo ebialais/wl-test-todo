@@ -1,7 +1,9 @@
 import React from 'react'
-import { Todo } from './Todo'
+import Todo from './Todo'
+import './style.css';
 
-export const TodoList = (props) => {
+
+const TodoList = (props) => {
     
     const todos = props.todos;
 
@@ -14,15 +16,19 @@ export const TodoList = (props) => {
     }
     
     return (
-        todos.map((todo) => {
-            return (
-                <Todo
-                    key={todo.id} 
-                    todo={todo}
-                    toggleCompleted={toggleCompleted}
-                    deleteTodo={deleteTodo}
-                />
-            )
-        })
+        <ul className='todo-list'>
+            {todos.map((todo) => {
+                return (
+                    <Todo
+                        key={todo.id} 
+                        todo={todo}
+                        toggleCompleted={toggleCompleted}
+                        deleteTodo={deleteTodo}
+                    />
+                )
+            })}
+        </ul>
     )
-}
+};
+
+export default TodoList;

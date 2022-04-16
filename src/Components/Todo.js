@@ -1,20 +1,28 @@
 import React from 'react';
 import './style.css';
 
-export const Todo = (props) => {
+const Todo = (props) => {
   const todo = props.todo
 
   return (
     <div className={ todo.completed ? 'completed todo-element' : 'uncompleted todo-element'}  >
-      <p className='todo-p'>{todo.action}</p>
-      <div className='icons'>
-        <button onClick={()=>props.toggleCompleted(todo.id)}>
-          {!todo.completed ? "To Do" : "Done"}
+      <p className={ todo.completed ? 'completed-todo-p' : 'todo-p'}>{todo.action}</p>
+      <div className='todo-buttons-wrapper'>
+        <button
+          className='todo-button'
+          onClick={()=>props.toggleCompleted(todo.id)}
+        >
+          <i className="fi fi-br-check"></i>
         </button>
-        <button onClick={()=>props.deleteTodo(todo.id)}>
-          remove
+        <button 
+          className='todo-button'
+          onClick={()=>props.deleteTodo(todo.id)}
+        >
+          <i className="fi fi-rs-trash"></i>
         </button>
       </div>
     </div>
   )
 };
+
+export default Todo;

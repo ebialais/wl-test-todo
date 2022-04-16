@@ -12,14 +12,14 @@ export class CommunicationLayer {
     todos = new Map();
 
     constructor(){
-        this.addTodos('aaaa');
+        this.addTodo('Meet the team @WorldLine');
     }
 
     fetchTodos = (callback) => {
         callback && callback(Array.from(this.todos.values()));
     };
 
-    addTodos = (action, reload) => {
+    addTodo = (action, reload) => {
         let todo = new Todo(action);
         this.todos.set(
             todo.id,

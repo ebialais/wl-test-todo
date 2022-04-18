@@ -10,6 +10,7 @@ exports[`test todoForm rendering: rendered TodoForm 1`] = `
   >
     <input
       className="todo-input"
+      data-testid="todoForm-input"
       onChange={[Function]}
       placeholder="Add something to do"
       type="text"

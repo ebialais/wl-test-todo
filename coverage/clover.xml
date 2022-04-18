@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650204756067" clover="3.2.0">
-  <project timestamp="1650204756067" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1650295567169" clover="3.2.0">
+  <project timestamp="1650295567169" name="All files">
+    <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11" elements="38" coveredelements="38" complexity="0" loc="27" ncloc="27" packages="2" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="App.js" path="/Users/emiliebialais/Desktop/tunzTest/wl-test-todo/src/App.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Components">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="TodoForm.js" path="/Users/emiliebialais/Desktop/tunzTest/wl-test-todo/src/Components/TodoForm.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="30" type="stmt"/>
+        <line num="7" count="30" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="30" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="17" count="30" type="stmt"/>
+      </file>
+      <file name="TodoList.js" path="/Users/emiliebialais/Desktop/tunzTest/wl-test-todo/src/Components/TodoList.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

@@ -20,6 +20,7 @@ const TodoForm = (props) => {
                 <input
                     className='todo-input'
                     type='text'
+                    data-testid='todoForm-input'
                     placeholder='Add something to do'
                     value={input}
                     onChange={handleChange}

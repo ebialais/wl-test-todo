@@ -1,5 +1,6 @@
 import React from 'react';
-import { act, render } from '@testing-library/react';
+import { act } from '@testing-library/react';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import TodoList from './TodoList';
 
 test('test todoList rendering', async () => {
@@ -14,13 +15,14 @@ test('test todoList rendering', async () => {
         const mockDeleteTodo = jest.fn();
 
         await act(async () => {
-            const renderedTodoList = render( 
+            const renderer = new ShallowRenderer();
+            const renderedTodoList = renderer.render( 
                 <TodoList 
                     todos={mockTodo}
-                    toggleComplete={mockToggleCompleted}
-                    deleteComplete={mockDeleteTodo}
+                    // toggleComplete={mockToggleCompleted}
+                    // deleteComplete={mockDeleteTodo}
                 /> );
-            expect(renderedTodoList).toMatchSnapshot('rendred todoList');
+            expect(renderedTodoList).toMatchSnapshot('rendered TodoList');
         });
     });
 });

@@ -3,9 +3,9 @@ import './style.css';
 
 const Todo = (props) => {
   const todo = props.todo
-
+  
   return (
-    <div className={ todo.completed ? 'completed todo-element' : 'uncompleted todo-element'}  >
+    <li className={ todo.completed ? 'completed todo-element' : 'uncompleted todo-element'}  >
       <p className={ todo.completed ? 'completed-todo-p' : 'todo-p'}>{todo.action}</p>
       <div className='todo-buttons-wrapper'>
         <button
@@ -21,7 +21,7 @@ const Todo = (props) => {
           <i className="fi fi-rs-trash"></i>
         </button>
       </div>
-    </div>
+    </li>
   )
 };
 

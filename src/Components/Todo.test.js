@@ -1,23 +1,26 @@
 import React from 'react';
-import { act, render } from '@testing-library/react';
+import { act } from '@testing-library/react';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import Todo from './Todo';
 
 test('test uncompleted todo rendering', async () => {
     await act(async () => {
-        const todo = { action: 'stuff', completed: false };
+        const props = {todo : { action: 'stuff', completed: false }};
         await act(async () => {
-            const { container } = render( <Todo todo={todo}/> );
-            expect(container).toMatchSnapshot('uncompleted todo');
+            const renderer = new ShallowRenderer()
+            const renderedTodo = renderer.render(<Todo {...props} />);
+            expect(renderedTodo).toMatchSnapshot('uncompleted todo');
         });
     });
 });
 
 test('test completed todo rendering', async () => {
     await act(async () => {
-        const todo = { action: 'stuff', completed: true };
+        const props = {todo : { action: 'stuff', completed: true }};
         await act(async () => {
-            const { container } = render( <Todo todo={todo}/> );
-            expect(container).toMatchSnapshot('uncompleted todo');
+            const renderer = new ShallowRenderer()
+            const renderedTodo = renderer.render(<Todo {...props} />);
+            expect(renderedTodo).toMatchSnapshot('completed todo');
         });
     });
 });

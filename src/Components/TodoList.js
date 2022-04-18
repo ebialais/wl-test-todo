@@ -6,14 +6,6 @@ import './style.css';
 const TodoList = (props) => {
     
     const todos = props.todos;
-
-    const toggleCompleted = (id) => {
-        props.toggleCompleted(id)
-    };
-
-    const deleteTodo = (id) => {
-        props.deleteTodo(id)
-    }
     
     return (
         <ul className='todo-list'>
@@ -22,8 +14,8 @@ const TodoList = (props) => {
                     <Todo
                         key={todo.id} 
                         todo={todo}
-                        toggleCompleted={toggleCompleted}
-                        deleteTodo={deleteTodo}
+                        toggleCompleted={props.toggleCompleted}
+                        deleteTodo={props.deleteTodo}
                     />
                 )
             })}

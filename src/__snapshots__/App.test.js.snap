@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render complete All: rendered App 1`] = `
+<div
+  className="todo-app"
+>
+  <h1
+    className="todo-title"
+  >
+    Todo App
+  </h1>
+  <TodoForm
+    addTodo={[Function]}
+  />
+  <TodoList
+    deleteTodo={[Function]}
+    todos={Array []}
+    toggleCompleted={[Function]}
+  />
+</div>
+`;

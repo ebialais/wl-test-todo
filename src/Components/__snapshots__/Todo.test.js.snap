@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test completed todo rendering: uncompleted todo 1`] = `<div />`;
+exports[`test completed todo rendering: completed todo 1`] = `
+<li
+  className="completed todo-element"
+>
+  <p
+    className="completed-todo-p"
+  >
+    stuff
+  </p>
+  <div
+    className="todo-buttons-wrapper"
+  >
+    <button
+      className="todo-button"
+      onClick={[Function]}
+    >
+      <i
+        className="fi fi-br-check"
+      />
+    </button>
+    <button
+      className="todo-button"
+      onClick={[Function]}
+    >
+      <i
+        className="fi fi-rs-trash"
+      />
+    </button>
+  </div>
+</li>
+`;
 
-exports[`test uncompleted todo rendering: uncompleted todo 1`] = `<div />`;
+exports[`test uncompleted todo rendering: uncompleted todo 1`] = `
+<li
+  className="uncompleted todo-element"
+>
+  <p
+    className="todo-p"
+  >
+    stuff
+  </p>
+  <div
+    className="todo-buttons-wrapper"
+  >
+    <button
+      className="todo-button"
+      onClick={[Function]}
+    >
+      <i
+        className="fi fi-br-check"
+      />
+    </button>
+    <button
+      className="todo-button"
+      onClick={[Function]}
+    >
+      <i
+        className="fi fi-rs-trash"
+      />
+    </button>
+  </div>
+</li>
+`;

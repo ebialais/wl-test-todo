@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { act } from '@testing-library/react';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import App from './App';
 
 it('renders h1', () => {
@@ -7,8 +9,12 @@ it('renders h1', () => {
   expect(h1).toBeInTheDocument();
 });
 
-it('should load todos', () => {
-// const { debug } = render(<App/>)
-// debug()
-
-})
+test('render complete All', async () => {
+  await act(async () => {
+      await act(async () => {
+          const renderer = new ShallowRenderer()
+          const renderedApp= renderer.render(<App />);
+          expect(renderedApp).toMatchSnapshot('rendered App');
+      });
+  });
+});

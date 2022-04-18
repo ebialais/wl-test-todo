@@ -10,12 +10,14 @@ const Todo = (props) => {
       <div className='todo-buttons-wrapper'>
         <button
           className='todo-button'
+          data-testid='toggleCompleted-button'
           onClick={()=>props.toggleCompleted(todo.id)}
         >
           <i className="fi fi-br-check"></i>
         </button>
         <button 
           className='todo-button'
+          data-testid='deleteTodo-button'
           onClick={()=>props.deleteTodo(todo.id)}
         >
           <i className="fi fi-rs-trash"></i>

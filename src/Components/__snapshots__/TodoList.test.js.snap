@@ -5,6 +5,7 @@ exports[`test todoList rendering: rendered TodoList 1`] = `
   className="todo-list"
 >
   <Todo
+    role="listitem"
     todo={
       Object {
         "action": "first stuff to do",
@@ -14,6 +15,7 @@ exports[`test todoList rendering: rendered TodoList 1`] = `
     }
   />
   <Todo
+    role="listitem"
     todo={
       Object {
         "action": "second stuff to do",
@@ -23,6 +25,7 @@ exports[`test todoList rendering: rendered TodoList 1`] = `
     }
   />
   <Todo
+    role="listitem"
     todo={
       Object {
         "action": "third stuff to do",

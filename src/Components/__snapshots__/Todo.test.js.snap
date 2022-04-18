@@ -14,6 +14,7 @@ exports[`test completed todo rendering: completed todo 1`] = `
   >
     <button
       className="todo-button"
+      data-testid="toggleCompleted-button"
       onClick={[Function]}
     >
       <i
@@ -22,6 +23,7 @@ exports[`test completed todo rendering: completed todo 1`] = `
     </button>
     <button
       className="todo-button"
+      data-testid="deleteTodo-button"
       onClick={[Function]}
     >
       <i
@@ -46,6 +48,7 @@ exports[`test uncompleted todo rendering: uncompleted todo 1`] = `
   >
     <button
       className="todo-button"
+      data-testid="toggleCompleted-button"
       onClick={[Function]}
     >
       <i
@@ -54,6 +57,7 @@ exports[`test uncompleted todo rendering: uncompleted todo 1`] = `
     </button>
     <button
       className="todo-button"
+      data-testid="deleteTodo-button"
       onClick={[Function]}
     >
       <i

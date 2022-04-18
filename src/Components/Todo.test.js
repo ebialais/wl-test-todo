@@ -1,5 +1,6 @@
 import React from 'react';
-import { act } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
+import { screen } from '@testing-library/dom';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import Todo from './Todo';
 
@@ -23,4 +24,24 @@ test('test completed todo rendering', async () => {
             expect(renderedTodo).toMatchSnapshot('completed todo');
         });
     });
+});
+
+it('buttons should methods', () => {
+    const props = {todo : { action: 'stuff', completed: true }};
+    const mockToggleCompleted = jest.fn();
+    const mockDeleteTodo = jest.fn();
+    render( 
+        <Todo 
+            toggleCompleted={mockToggleCompleted}
+            deleteTodo={mockDeleteTodo}
+            {...props}
+        /> );
+
+    const toggleCompletedButton = screen.getByTestId('toggleCompleted-button');
+    fireEvent.click(toggleCompletedButton);
+    expect(mockToggleCompleted).toHaveBeenCalledTimes(1);
+
+    const deleteTodoButton = screen.getByTestId('deleteTodo-button');
+    fireEvent.click(deleteTodoButton);
+    expect(mockDeleteTodo).toHaveBeenCalledTimes(1);
 });

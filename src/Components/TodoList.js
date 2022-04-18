@@ -13,6 +13,7 @@ const TodoList = (props) => {
                 return (
                     <Todo
                         key={todo.id} 
+                        role='listitem'
                         todo={todo}
                         toggleCompleted={props.toggleCompleted}
                         deleteTodo={props.deleteTodo}

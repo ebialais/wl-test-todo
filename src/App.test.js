@@ -40,9 +40,12 @@ test('should behave as expected', () => {
   //completed element
 
   const toggleCompletedButtons = screen.getAllByTestId('toggleCompleted-button');
+  expect(screen.getByText('a new todo').parentElement).toHaveClass('uncompleted');
   fireEvent.click(toggleCompletedButtons[1]);
   expect(screen.getByText('a new todo').parentElement).toHaveClass('completed');
-
+  fireEvent.click(toggleCompletedButtons[1]);
+  expect(screen.getByText('a new todo').parentElement).toHaveClass('uncompleted');
+  
   //delete element
 
   const deleteTodoButtons = screen.getAllByTestId('deleteTodo-button');

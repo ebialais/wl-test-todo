@@ -26,7 +26,7 @@ test('test completed todo rendering', async () => {
     });
 });
 
-it('buttons should methods', () => {
+it('buttons should call methods', () => {
     const props = {todo : { action: 'stuff', completed: true }};
     const mockToggleCompleted = jest.fn();
     const mockDeleteTodo = jest.fn();

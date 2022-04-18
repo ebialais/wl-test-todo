@@ -1,4 +1,4 @@
-import { render, act, screen, fireEvent, getByText } from '@testing-library/react';
+import { render, act, screen, fireEvent } from '@testing-library/react';
 import user from '@testing-library/user-event';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import App from './App';

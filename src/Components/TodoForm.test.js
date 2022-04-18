@@ -2,7 +2,7 @@ import React from 'react';
 import { render, act, fireEvent } from '@testing-library/react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import user from '@testing-library/user-event';
-import TodoForm from './TodoForm';
+import TodoForm from './TodoForm'; 
 
 
 it('should accept value for new todo', () => {

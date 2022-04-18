@@ -2,7 +2,6 @@ import React from 'react';
 import { act  } from '@testing-library/react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import TodoList from './TodoList';
-import Todo from './Todo';
 
 test('test todoList rendering', async () => {
     await act(async () => {
